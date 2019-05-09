@@ -1,0 +1,28 @@
+#contact.content.container-fluid
+  %h1.display-3.color-header Contact
+  %h3.lead.text-muted Let's chat.
+  %br
+  .row.justify-content-md-center
+    .col-md-4
+      %form.text-center
+        .form-group
+          %label Email
+          %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :placeholder => "Enter email", :type => "email"}/
+          %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+        .form-group
+          %label Name
+          %input.form-control
+        .form-group
+          %label Message
+          %input.form-control{:type => "textarea"}/
+        %button.btn.btn-primary{:type => "submit"} Submit
+  .row.justify-content-md-center.pt-5
+    .col-md-3.text-center
+      = fa_icon 'map-marker', class: 'fa-2x'
+      %p Lawrence, KS 66049, USA
+    .col-md-3.text-center
+      = fa_icon 'phone', class: 'fa-2x'
+      %p + 1 785 643 7581
+    .col-md-3.text-center
+      = fa_icon 'envelope', class: 'fa-2x'
+      %p bsauvage14@gmail.com
