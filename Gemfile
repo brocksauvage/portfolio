@@ -46,8 +46,6 @@ gem "font-awesome-rails"
 
 gem 'mini_racer'
 
-gem 'trestle'
-
 gem 'simple_form'
 
 gem 'mail_form'
