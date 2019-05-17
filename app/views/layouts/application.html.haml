@@ -9,5 +9,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body{"data-spy" => "scroll", "data-target" => "#header-nav"}
     = render partial: "layouts/header"
-    = yield
+    .container-fluid
+      = yield
     = render partial: "layouts/footer"

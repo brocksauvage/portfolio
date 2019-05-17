@@ -1,15 +1,26 @@
 %nav#header-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-  %a.navbar-brand{:href => "#"}web
-  %a.navbar-brand.color-header{:href => "#"}sauvy
+  %a.navbar-brand{:href => "#"}websauvy
   %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarNav.collapse.navbar-collapse.justify-content-end
     %ul.navbar-nav
-      %li.nav-item
-        %a.nav-link{:href => "#landing"} Home
-      %li.nav-item
-        %a.nav-link{:href => "#skills"} Skills
-      %li.nav-item
-        %a.nav-link{:href => "#work"} Work
-      %li.nav-item
-        %a.nav-link{:href => "#contact"} Contact
+      - if current_page?(root_path)
+        %li.nav-item
+          %a.nav-link{:href => "#about"} About
+        %li.nav-item
+          %a.nav-link{:href => "#skills"} Skills
+        %li.nav-item
+          %a.nav-link{:href => "#work"} Work
+        %li.nav-item
+          %a.nav-link{:href => "#contact"} Contact
+        %li.nav-item
+          = link_to "Resume", download_resume_path, class: 'nav-link'
+      - else
+        %li.nav-item
+          = link_to 'Home', root_path, class: 'nav-link'
+        %li.nav-item
+          = link_to 'Work', projects_path, class: 'nav-link'
+        %li.nav-item
+          = link_to 'Contact', root_path, class: 'nav-link'
+        %li.nav-item
+          = link_to 'Resume', root_path, class: 'nav-link'

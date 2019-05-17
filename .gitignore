@@ -66,3 +66,4 @@ yarn-debug.log*
 !/storage/.keep
 
 .docker-development-vars
+/node_modules

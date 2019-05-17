@@ -23,11 +23,13 @@
 
 html{
   scroll-behavior: smooth;
+  background-color: #fcfcfc;
 }
 
 body{
   position: relative;
 }
+
 h3{
   text-align: center;
   font-family: 'Helvetica';
@@ -38,19 +40,43 @@ h1{
   font-family: 'Quantify';
 }
 
+h5{
+  text-align: center;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+
+p{
+  font-family: 'Helvetica';
+}
+
+.btn-primary{
+  background-color: #ff8d23 !important;
+  border-color: transparent !important;
+}
+
 .color-header{
-  color: #a500ff;
+  color: #ff8d23 !important;
+}
+
+.color-header-two{
+  color: #00e2d7 !important;
 }
 
 #header-nav{
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   top: 0;
 }
 
+#container{
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
 .navbar-brand{
   font-family: 'Quantify';
-  margin-right: 0;
+  margin-right: 0px;
 }
 
 .logo{
@@ -59,20 +85,88 @@ h1{
   margin: auto;
 }
 
-.content{
+.landing-content{
   height: 45em;
 }
 
-.landing-item-image{
+.about-content{
+  height: 30em;
+}
+
+.about-me-photo{
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.2s ease-out;
+}
+
+
+.landing-item{
+  text-align: center;
+  vertical-align: middle;
+  background-image: linear-gradient(to right, #68edff, #68ffe0);
+  height: 100%;
   border-radius: 50%;
   transition: box-shadow 0.2s ease-out;
   box-shadow: 0px 0px 0px 0px #a500ff;
 }
 
-.landing-item-image:hover {
-  box-shadow: 0px 0px 0px 10px #a500ff;
+.skill-image{
+  transition: transform 0.2s ease-out, filter 0.2s ease-out;
 }
 
-.landing-item-image:hover + .circle-one{
+.skill-container:hover .skill-image{
+  transform: scale(0.9);
+  filter: brightness(60%);
+}
+
+.skill-text{
+  color: #ff8d23;
+  text-shadow: 2px 2px white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Helvetica';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-out;
+  text-align: center;
+  opacity: 0;
+}
+
+.skill-container:hover .skill-text{
+  opacity: 1;
+}
+
+
+
+.case-study-photo, .case-study-card{
+  transition: box-shadow 0.2s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.case-study-photo:hover{
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 10px #ff8d23;
+}
+
+.case-study-card:hover{
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px #ff8d23;
+  z-index: 1 !important;
+}
+
+.landing-item:hover {
+  box-shadow: 0px 0px 0px 15px #ff8d23;
+}
+
+.landing-item:hover, .about-me-photo:hover{
   transform: scale(1.1);
+}
+
+.progress{
+  width: 50%;
 }

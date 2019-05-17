@@ -1,21 +1,14 @@
-#contact.content.container-fluid
-  %h1.display-3.color-header Contact
-  %h3.lead.text-muted Let's chat.
+#contact.pb-5
+  %h1.display-3.color-header-two Contact
+  %h3.lead.text-muted Need a project done? Let's chat.
   %br
   .row.justify-content-md-center
     .col-md-4
-      %form.text-center
-        .form-group
-          %label Email
-          %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :placeholder => "Enter email", :type => "email"}/
-          %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
-        .form-group
-          %label Name
-          %input.form-control
-        .form-group
-          %label Message
-          %input.form-control{:type => "textarea"}/
-        %button.btn.btn-primary{:type => "submit"} Submit
+      = simple_form_for @contact, class: 'text-center' do |f|
+        = f.input :name, label: 'Name'
+        = f.input :email, label: 'Email', placeholder: 'user@domain.com'
+        = f.input :message, as: :text, label: 'Message'
+        = f.submit 'Send', class: 'btn btn-primary'
   .row.justify-content-md-center.pt-5
     .col-md-3.text-center
       = fa_icon 'map-marker', class: 'fa-2x'
