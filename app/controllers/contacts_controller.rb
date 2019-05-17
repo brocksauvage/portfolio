@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:notice] = "Thank you for your message. I'll be getting in touch with you soon!"
-      render partial: "contact"
+      redirect_to root_path
     else
       flash.now[:alert] = "Your message didn't send! Get in touch with me at bsauvage14@gmail.com."
     end
