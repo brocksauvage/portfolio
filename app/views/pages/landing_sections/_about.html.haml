@@ -2,11 +2,25 @@
   %h1.display-3.color-header-two About
   %h3.lead.text-muted Nice to meet you.
   .row.justify-content-center.h-100
-    .col-md-3.my-auto
-      = image_tag "brock", class: "about-me-photo img-fluid"
+    .col-3.my-auto
+      #carouselControls.carousel.slide.carousel-fade{"data-ride" => "carousel", "data-interval" => false}
+        .carousel-inner
+          .carousel-item.active
+            = image_tag "portrait", class: "about-me-photo img-fluid"
+          .carousel-item
+            = image_tag "mountain_man", class: "about-me-photo img-fluid"
+          .carousel-item
+            = image_tag "cambodia", class: "about-me-photo img-fluid"
+        %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
+          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+          %span.sr-only Previous
+        %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
+          %span.carousel-control-next-icon{"aria-hidden" => "true"}
+          %span.sr-only Next
     .col-md-4.my-auto
       %span.align-middle
-        I'm Brock Sauvage, a full stack web developer based out of Lawrence, Kansas.
-        I build sites and applications mostly in Ruby on Rails, but I'm not afraid to dive into
-        other languages and frameworks when the project calls for it. In my free time, I enjoy
-        kayaking, traveling, and taking long walks through Stack Overflow.
+        I'm Brock Sauvage, a full stack web developer specializing in building Ruby on Rails applications. I love making intuitive UIs, building complex backends, and learning new technologies to bring into my toolbox!
+      %br
+      %br
+        I also have experience living and working abroad, serving with the Peace Corps as an educator and community developer in rural Cambodia. In my free time, I enjoy
+        kayaking long stretches of river, game development, and taking long walks through Stack Overflow!

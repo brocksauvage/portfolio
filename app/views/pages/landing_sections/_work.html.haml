@@ -1,40 +1,9 @@
 #work.pb-5
-  %h1.display-3.color-header-two Case Study
-  %h3.lead.text-muted Making Schol Haller, an app to connect KU's Scholarship Hall community.
-  .row.justify-content-around.mt-4
-    .col-md-8
-      = image_tag "scholhaller", class: "img-fluid case-study-photo"
-  .row.justify-content-around.mt-4
+  %h1.display-3.color-header-two Portfolio
+  .row
     .col-md-12
-      .card-group
-        .card.case-study-card
-          .card-body
-            %h5 BACKGROUND
-            %p
-              The Scholarship Hall community at the University of Kansas has been home
-              to thousands of Jayhawks, students, and professionals--myself included. But outside of social
-              media apps, Schol Hallers had no way to connect and network. Enter Schol Haller, a project started
-              to fill that gap.
-        .card.case-study-card
-          .card-body
-            %h5 STRATEGY
-            %p
-              To make a worthwhile social space, I decided to focus on an important piece of Scholarship Hall
-              culture: alumni networking. I knew that the application would need to incoporate opportunities for
-              current hall residents to connect professionally with alumni.
-        .card.case-study-card
-          .card-body
-            %h5 DATABASE DESIGN
-            %p
-              Backed by PostgreSQL, the database design of the app allows for a myriad of features, including the posting
-              of job opportunities a la Linked-In, user-to-user messaging, and the ability for users to search for other users
-              by a variety of criteria, including halls that they lived in, major, and career.
-
-        .card.case-study-card
-          .card-body
-            %h5 UX/UI
-            %p
-              Wireframed initially with pencil and paper, and later with Adobe XD, proper attention was paid to the layout
-              of every application screen to ensure that Schol Haller provided a user experience that is expected of modern social
-              media applications. Structured by HTML5 and styled with a combination of Bootstrap 4 and Sass, Schol Haller's interface
-              allows for easy navigation while users are supplied with relevant and useful content suited to their needs.
+      .card-deck
+        .card.rounded-lg
+          .project-card-photo= image_tag 'scholhaller', class: "card-img-top"
+        .card.rounded-lg
+          .project-card-photo= image_tag 'trappedinc', class: "card-img-top trapped-inc img-fluid"

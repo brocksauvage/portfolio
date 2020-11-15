@@ -1,29 +1,44 @@
 #skills.pb-5
-  %h1.display-3.color-header-two Skills
-  %h3.lead.text-muted At your service.
-  .row.justify-content-around.mt-5
-    .col.text-center
-      .skill-container
-        = image_tag "skills/holy-trinity", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text HTML, CSS, JavaScript
-    .col.text-center
-      .skill-container
-        = image_tag "skills/rails", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text Ruby on Rails
-    .col.text-center
-      .skill-container
-        = image_tag "skills/postgres.svg.png", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text PostgreSQL
-  .row.justify-content-around.mt-5
-    .col.text-center
-      .skill-container
-        = image_tag "skills/mysql", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text MySQL
-    .col.text-center
-      .skill-container
-        = image_tag "skills/adobexd.svg.png", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text Adobe XD
-    .col.text-center
-      .skill-container
-        = image_tag "skills/illustrator", { size: "150x150", class: 'img-fluid skill-image' }
-        %p.skill-text Adobe Illustrator
+  %h1.display-3.color-header-two My Toolkit
+  .row.text-center.pt-5
+    .col
+      %h4.text-muted Novice
+    .col
+      %h4.text-muted Proficient
+    .col
+      %h4.text-muted Advanced
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/rails", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#rails-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/holy-trinity", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#trinity-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/postgres.svg.png", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#postgres-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/docker", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#docker-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/react", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#react-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/mysql", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#mysql-bar
+  .row.pb-3.mr-5
+    .col-1
+      = image_tag "skills/python", { size: "150x150", class: 'img-fluid skill-image' }
+    .col-11
+      .skill-bar#python-bar

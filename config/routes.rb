@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :pages, only: [:index]
   get 'download_resume', to: "pages#download_resume"
   resources "contacts", only: [:new, :create]
+  resources "projects", only: [:show]
 end

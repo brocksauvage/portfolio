@@ -1,21 +1,22 @@
 #contact.pb-5
-  %h1.display-3.color-header-two Contact
-  %h3.lead.text-muted Need a project done? Let's chat.
+  %h1.display-3.color-header-two Contact Me
+  %h3.lead.text-muted Want to chat? Send me a message, or give me a call!
   %br
   .row.justify-content-md-center
     .col-md-4
-      = simple_form_for @contact, class: 'text-center' do |f|
-        = f.input :name, label: 'Name'
-        = f.input :email, label: 'Email', placeholder: 'user@domain.com'
-        = f.input :message, as: :text, label: 'Message'
-        = f.submit 'Send', class: 'btn btn-primary'
+      #contact-container
+        = simple_form_for @contact, class: 'text-center' do |f|
+          = f.input :name, label: 'Name'
+          = f.input :email, label: 'Email', placeholder: 'user@domain.com'
+          = f.input :message, as: :text, label: 'Message'
+          = f.submit 'Send', class: 'btn btn-primary'
   .row.justify-content-md-center.pt-5
     .col-md-3.text-center
-      = fa_icon 'map-marker', class: 'fa-2x'
+      = fa_icon 'map-marker', class: 'fa-2x contact-icon-glow'
       %p Lawrence, KS 66049, USA
     .col-md-3.text-center
-      = fa_icon 'phone', class: 'fa-2x'
+      = fa_icon 'phone', class: 'fa-2x contact-icon-glow'
       %p + 1 785 643 7581
     .col-md-3.text-center
-      = fa_icon 'envelope', class: 'fa-2x'
-      %p bsauvage14@gmail.com
+      = fa_icon 'envelope', class: 'fa-2x contact-icon-glow'
+      %p brocksauvage@gmail.com

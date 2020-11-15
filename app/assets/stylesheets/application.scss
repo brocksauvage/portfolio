@@ -50,6 +50,98 @@ p{
   font-family: 'Helvetica';
 }
 
+#skill-spectrum{
+  background: linear-gradient(to right, #fff27d, #7dffab, #7dd8ff);
+}
+
+#skill-screen{
+  background: white;
+  height: 100%;
+  position: relative;
+}
+
+.skill-row{
+
+}
+.skill-bar{
+  height: 5vw;
+  width: 0;
+  transition: width 2s ease;
+}
+
+.skill-text{
+  z-index: 2;
+  color: white;
+  font-size: 1vw;
+  vertical-align: middle;
+  opacity: 0;
+  animation: skillTextAppear 3s ease forwards;
+  animation-delay: 2s;
+  overflow: hidden;
+}
+
+@keyframes skillTextAppear{
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+#rails-bar{
+  background: linear-gradient(to right, #ff9b94, #ff4d40);
+}
+
+#trinity-bar{
+  background: linear-gradient(to right, #ffdb94, #ffba33);
+}
+
+#postgres-bar{
+  background: linear-gradient(to right, #edb3ff, #cf33ff);
+}
+
+#mysql-bar{
+  background: linear-gradient(to right, #adffd6, #4affa4);
+}
+
+#illustrator-bar{
+  background: linear-gradient(to right, #ffadd1, #ff368e);
+}
+
+#docker-bar{
+  background: linear-gradient(to right, #99e2ff, #38c7ff);
+}
+
+#react-bar{
+  background: linear-gradient(to right, #ff9edd, #ff00a6);
+}
+
+#python-bar{
+  background: linear-gradient(to right, #b4ff91, #53ff03);
+}
+
+@keyframes expandRailsBar{
+  from { width: 0% }
+  to { width: 85% }
+}
+
+@keyframes expandTrinityBar{
+  from { width: 0% }
+  to { width: 80% }
+}
+
+@keyframes expandPostgresBar{
+  from { width: 0% }
+  to { width: 70% }
+}
+
+@keyframes expandMySqlBar{
+  from { width: 0% }
+  to { width: 45% }
+}
+
+@keyframes expandIllustratorBar{
+  from { width: 0% }
+  to { width: 30% }
+}
+
 .btn-primary{
   background-color: #ff8d23 !important;
   border-color: transparent !important;
@@ -60,7 +152,33 @@ p{
 }
 
 .color-header-two{
-  color: #00e2d7 !important;
+  color: black !important;
+}
+
+.typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  opacity: 0;
+  animation:
+    typing 3s steps(20, end),
+    blink-caret .75s step-end infinite,
+    fadeInAnimation forwards;
+  animation-delay: 5.5s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 #header-nav{
@@ -79,10 +197,35 @@ p{
   margin-right: 0px;
 }
 
+.name-plate{
+  opacity: 0;
+  animation: fadeInAnimation ease 5s forwards;
+  animation-delay: 3s;
+}
+
 .logo{
   width: 50%;
   display: block;
   margin: auto;
+  opacity: 0;
+  animation: fadeInAnimation ease 5s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.header-logo{
+  width: 50px;
+  height: auto;
+  display: block;
+  margin-right: 10px;
 }
 
 .landing-content{
@@ -93,13 +236,16 @@ p{
   height: 30em;
 }
 
+@keyframes slide{
+  from { left: 0; }
+  to { left: 1000px; }
+}
+
 .about-me-photo{
   margin: auto;
   display: block;
   border-radius: 50%;
-  transition: transform 0.2s ease-out;
 }
-
 
 .landing-item{
   text-align: center;
@@ -111,60 +257,45 @@ p{
   box-shadow: 0px 0px 0px 0px #a500ff;
 }
 
-.skill-image{
-  transition: transform 0.2s ease-out, filter 0.2s ease-out;
+.project-card-photo {
+  height: 200px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.skill-container:hover .skill-image{
-  transform: scale(0.9);
-  filter: brightness(60%);
+.trapped-inc{
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  width: 90%;
+  display: block;
 }
 
-.skill-text{
-  color: #ff8d23;
-  text-shadow: 2px 2px white;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Helvetica';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease-out;
-  text-align: center;
+#contact-container{
+  height: 300px;
+}
+
+.response-message{
   opacity: 0;
+  vertical-align: middle;
+  animation: fadeInAnimation 2s ease forwards;
+  animation-delay: 1s;
 }
 
-.skill-container:hover .skill-text{
-  opacity: 1;
+.contact-icon-glow:hover{
+    color: #ff8d23;
+    transition: color 0.25s;
 }
 
-
-
-.case-study-photo, .case-study-card{
-  transition: box-shadow 0.2s ease-out;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-}
-
-.case-study-photo:hover{
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 10px #ff8d23;
-}
-
-.case-study-card:hover{
-  transform: translate(-5px, -5px);
-  box-shadow: 5px 5px #ff8d23;
-  z-index: 1 !important;
+.social-icon-glow:hover{
+    color: #00ffdd;
+    transition: color 0.5s ease;
 }
 
 .landing-item:hover {
   box-shadow: 0px 0px 0px 15px #ff8d23;
-}
-
-.landing-item:hover, .about-me-photo:hover{
-  transform: scale(1.1);
 }
 
 .progress{
