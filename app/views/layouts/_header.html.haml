@@ -1,27 +1,30 @@
-%nav#header-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+%nav#header-nav.navbar.navbar-expand.navbar-dark.bg-dark
   = image_tag 'logo_white.png', class: "img-fluid header-logo"
-  %a.navbar-brand{:href => "#"}Brock Sauvage
-  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
-    %span.navbar-toggler-icon
+  .navbar-brand Brock Sauvage
+  -# %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+  -#   %span.navbar-toggler-icon
   #navbarNav.collapse.navbar-collapse.justify-content-end
-    %ul.navbar-nav
-      - if current_page?(root_path)
-        %li.nav-item
-          %a.nav-link{:href => "#about"} About
-        %li.nav-item
-          %a.nav-link{:href => "#skills"} Skills
-        -# %li.nav-item
-        -#   %a.nav-link{:href => "#work"} Work
-        %li.nav-item
-          %a.nav-link{:href => "#contact"} Contact
-        %li.nav-item
-          = link_to "Resume", download_resume_path, class: 'nav-link'
-      - else
-        %li.nav-item
-          = link_to 'Home', root_path, class: 'nav-link'
-        -# %li.nav-item
-        -#   = link_to 'Work', projects_path, class: 'nav-link'
-        %li.nav-item
-          = link_to 'Contact', root_path, class: 'nav-link'
-        %li.nav-item
-          = link_to 'Resume', root_path, class: 'nav-link'
+    %ul.navbar-nav.w-100
+      %li.nav-item.ml-auto
+        .resume-button-container
+          = link_to 'Resume', root_path, class: 'resume-button-text'
+  -#     - if current_page?(root_path)
+  -#       %li.nav-item
+  -#         %a.nav-link{:href => "#about"} About
+  -#       %li.nav-item
+  -#         %a.nav-link{:href => "#skills"} Skills
+  -#       -# %li.nav-item
+  -#       -#   %a.nav-link{:href => "#work"} Work
+  -#       %li.nav-item
+  -#         %a.nav-link{:href => "#contact"} Contact
+  -#       %li.nav-item
+  -#         = link_to "Resume", download_resume_path, class: 'nav-link'
+  -#     - else
+  -#       %li.nav-item
+  -#         = link_to 'Home', root_path, class: 'nav-link'
+  -#       -# %li.nav-item
+  -#       -#   = link_to 'Work', projects_path, class: 'nav-link'
+  -#       %li.nav-item
+  -#         = link_to 'Contact', root_path, class: 'nav-link'
+  -#       %li.nav-item
+  -#         = link_to 'Resume', root_path, class: 'nav-link'

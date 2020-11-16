@@ -7,7 +7,7 @@
       #contact-container
         = simple_form_for @contact, class: 'text-center' do |f|
           = f.input :name, label: 'Name'
-          = f.input :email, label: 'Email', placeholder: 'user@domain.com'
+          = f.input :email, label: 'Email'
           = f.input :message, as: :text, label: 'Message'
           = f.submit 'Send', class: 'btn btn-primary'
   .row.justify-content-md-center.pt-5
