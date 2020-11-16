@@ -65,5 +65,21 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+/tmp/pids/*              
+!/log/.keep
+!/tmp/.keep
+!/tmp/pids
+!/tmp/pids/.keep
+
 .docker-development-vars
 /node_modules
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
