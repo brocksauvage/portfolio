@@ -8,13 +8,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag asset_path('favicon')
-    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=G-SHNGRX28J3"}
-    :javascript
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SHNGRX28J3');
-
   %body{"data-spy" => "scroll", "data-target" => "#header-nav"}
     = render partial: "layouts/header"
     .container-fluid
